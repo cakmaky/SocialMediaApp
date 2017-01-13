@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		580BC0521E289FD600C4CE53 /* SocialMediaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMediaApp.entitlements; sourceTree = "<group>"; };
 		584EF2E31E25F0AC00A96B41 /* SocialMediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		584EF2E61E25F0AC00A96B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		584EF2E81E25F0AC00A96B41 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		584EF2E51E25F0AC00A96B41 /* SocialMediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				580BC0521E289FD600C4CE53 /* SocialMediaApp.entitlements */,
 				584EF2FF1E275F3F00A96B41 /* Util */,
 				584EF2FC1E25F89000A96B41 /* Model */,
 				584EF2FB1E25F88600A96B41 /* Controller */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 8CRUH85QUW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -393,6 +400,7 @@
 			baseConfigurationReference = 9E1804DE78AB802A026B106D /* Pods-SocialMediaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMediaApp/SocialMediaApp.entitlements;
 				DEVELOPMENT_TEAM = 8CRUH85QUW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,6 +419,7 @@
 			baseConfigurationReference = BA29BB687F797B82BD711EBB /* Pods-SocialMediaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMediaApp/SocialMediaApp.entitlements;
 				DEVELOPMENT_TEAM = 8CRUH85QUW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
