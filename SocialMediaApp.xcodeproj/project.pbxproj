@@ -10,6 +10,7 @@
 		05E5CD0BA316B061F3D8C62A /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA494E28D54B0C3015C2A74A /* Pods_SocialMediaApp.framework */; };
 		580BC0541E28B54400C4CE53 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BC0531E28B54400C4CE53 /* FeedVC.swift */; };
 		580BC0561E29679500C4CE53 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BC0551E29679500C4CE53 /* CircleView.swift */; };
+		580BC0581E29FC7100C4CE53 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BC0571E29FC7100C4CE53 /* PostCell.swift */; };
 		584EF2E71E25F0AC00A96B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF2E61E25F0AC00A96B41 /* AppDelegate.swift */; };
 		584EF2E91E25F0AC00A96B41 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF2E81E25F0AC00A96B41 /* SignInVC.swift */; };
 		584EF2EC1E25F0AC00A96B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 584EF2EA1E25F0AC00A96B41 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		580BC0521E289FD600C4CE53 /* SocialMediaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMediaApp.entitlements; sourceTree = "<group>"; };
 		580BC0531E28B54400C4CE53 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		580BC0551E29679500C4CE53 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		580BC0571E29FC7100C4CE53 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		584EF2E31E25F0AC00A96B41 /* SocialMediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		584EF2E61E25F0AC00A96B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		584EF2E81E25F0AC00A96B41 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				584EF3041E2764D800A96B41 /* FancyField.swift */,
 				584EF3061E276EE900A96B41 /* FancyBtn.swift */,
 				580BC0551E29679500C4CE53 /* CircleView.swift */,
+				580BC0571E29FC7100C4CE53 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				584EF2FE1E275E9D00A96B41 /* FancyView.swift in Sources */,
 				584EF3011E275F5300A96B41 /* Constants.swift in Sources */,
 				584EF3071E276EE900A96B41 /* FancyBtn.swift in Sources */,
+				580BC0581E29FC7100C4CE53 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
