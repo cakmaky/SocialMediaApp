@@ -151,7 +151,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZc-XP-TWl" customClass="FancyView" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-HM-auD">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-HM-auD">
                                         <rect key="frame" x="16" y="20" width="45" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="7CO-Of-eXG"/>
@@ -166,6 +166,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="IGr-HM-auD" firstAttribute="top" secondItem="aZc-XP-TWl" secondAttribute="top" constant="20" id="FR5-Bs-t6J"/>
                                     <constraint firstItem="I9I-Vr-nEF" firstAttribute="centerX" secondItem="aZc-XP-TWl" secondAttribute="centerX" id="KTi-EI-FC5"/>
@@ -173,6 +174,9 @@
                                     <constraint firstItem="I9I-Vr-nEF" firstAttribute="centerY" secondItem="IGr-HM-auD" secondAttribute="centerY" id="sOA-KM-zAB"/>
                                     <constraint firstItem="IGr-HM-auD" firstAttribute="leading" secondItem="aZc-XP-TWl" secondAttribute="leading" constant="16" id="yqn-uw-hHy"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CdO-iz-fNE" appends="YES" id="t9b-ew-Itx"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45P-6N-KIu" customClass="FancyView" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="16" y="81" width="382" height="65"/>
@@ -340,6 +344,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdX-Ut-cJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CdO-iz-fNE">
+                    <connections>
+                        <action selector="signOutBtnPressed:" destination="PSI-1f-9ha" id="VT8-Pb-ae8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="869.56521739130437" y="-28.532608695652176"/>
         </scene>
