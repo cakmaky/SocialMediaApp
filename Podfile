@@ -13,6 +13,6 @@ target 'SocialMediaApp' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FBSDKLoginKit'
-  
+  pod 'SwiftKeychainWrapper'
 
 end
