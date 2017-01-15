@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 let DB_BASE = FIRDatabase.database().reference()  // url for database
-let STORAGE_BASE = FIRStorage.storage().reference()
+let STORAGE_BASE = FIRStorage.storage().reference()  // url for storage
 
 class DataService {
     

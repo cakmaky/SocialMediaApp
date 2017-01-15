@@ -18,13 +18,10 @@ class SignInVC: UIViewController {
     @IBOutlet weak var emailField: FancyField!
     @IBOutlet weak var pwdField: FancyField!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {   // segue s cannot be performed in viewDidLoad
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
@@ -34,12 +31,7 @@ class SignInVC: UIViewController {
     }
     
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func facebookBtnTapped(_ sender: Any) {
+       @IBAction func facebookBtnTapped(_ sender: Any) {
         
         let facebookLogin = FBSDKLoginManager()
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in

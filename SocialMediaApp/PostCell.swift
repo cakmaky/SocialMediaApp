@@ -30,25 +30,25 @@ class PostCell: UITableViewCell {
         self.likesLbl.text = "\(post.likes)"
         
         if img != nil {
-        self.postImg.image = img
+            self.postImg.image = img
         } else {
-                let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
-                ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
-                    if error != nil {
-                        print("ALERT: Unable to download image from firebase storage")
-                    } else {
-                        print("ALERT: Image downloaded from firebase storage")
-                        if let imgData = data {
-                            if let img = UIImage(data: imgData){
-                                self.postImg.image = img
-                                FeedVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
-                            }
+            let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
+            ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
+                if error != nil {
+                    print("ALERT: Unable to download image from firebase storage")
+                } else {
+                    print("ALERT: Image downloaded from firebase storage")
+                    if let imgData = data {
+                        if let img = UIImage(data: imgData){
+                            self.postImg.image = img
+                            FeedVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
                         }
-                        
-                        
                     }
-                        
                     
+                    
+                }
+                
+                
             })
             
         }
