@@ -19,6 +19,7 @@ class Post {
         return _caption
     }
     var imageUrl: String {
+        
         return _imageUrl
     }
     var likes: Int {

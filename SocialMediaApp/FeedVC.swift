@@ -66,8 +66,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            
-            if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString){
+           
+            if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString ){
                 cell.configureCell(post: post, img: img)
                 return cell
             } else {
@@ -112,7 +112,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let imgData = UIImageJPEGRepresentation(img, 0.2) {
             
-            
             let imgUid = NSUUID().uuidString
             let metadata = FIRStorageMetadata()
             metadata.contentType = "image/jpeg"
@@ -124,14 +123,29 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     
                     print("ALERT: Successfully uploaded image to firebase storage")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadURL {
+                    self.postToFirebase(imgUrl: url)
+                    }
                 }
-                
-                
             }
         }
+    }
+    func postToFirebase(imgUrl: String) {
         
+        let post: Dictionary<String, AnyObject> = [
+            "caption" : captionField.text! as AnyObject,
+            "imageUrl"  : imgUrl as AnyObject,
+            "likes"   :  0 as AnyObject
+        ]
         
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
         
+        captionField.text = ""
+        imageSelected = false
+        imageAdd.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
     }
     
     @IBAction func signOutBtnPressed(_ sender: Any) {
